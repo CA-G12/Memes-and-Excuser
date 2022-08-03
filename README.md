@@ -13,7 +13,7 @@
 - User can search for a specific Excuses.
 
 ## ✧ User Stories
--As a user : 
+As a user : 
 - When I open the application, I want to see all memes on the page.
 - I can search for any memes I want by entering the name of the meme in the search bar. 
 - When I click on the arrow in the nav bar, I will move to the excuser page
