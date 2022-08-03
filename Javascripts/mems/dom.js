@@ -4,6 +4,7 @@ fetchApi("https://api.imgflip.com/get_memes",(data)=>{fetchFromApi(data,memeDom)
 
 function memeDom(imgurl, name , boxCount ) {
    let memeDiv = document.createElement("div")
+   memeDiv.classList.add("meme-div")
 
    let memeImg =document.createElement("img")
    memeImg.setAttribute("src", imgurl)
@@ -15,7 +16,7 @@ function memeDom(imgurl, name , boxCount ) {
    
    let memeBoxCount= document.createElement("span")
    memeBoxCount.classList.add("meme-box-count")
-   memeBoxCount.textContent=boxCount
+   memeBoxCount.textContent="Box count : "+boxCount
    
    memeDiv.append(memeImg,memeName,memeBoxCount)
    memeSection.appendChild(memeDiv)
