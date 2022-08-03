@@ -26,7 +26,7 @@ function selectImage(categoryName) {
   const images = [
     "../images/college.JPG",
     "../images/family.webp",
-    "../images/office.JPG",
+    "../images/office.jpg",
     "../images/party.gif",
     "../images/children.webp",
   ];
