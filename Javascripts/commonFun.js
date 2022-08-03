@@ -1,3 +1,12 @@
+const logoheader=document.getElementById("logoheader")
+const excuses=document.getElementById("excuses")
+logoheader.addEventListener("click",()=>{
+  window.location.href="../index.html"
+})
+excuses.addEventListener("click",()=>{
+  window.location.href="../index.html"
+})
+
 function fetchApi(url,loadingCb ,cb) {
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = () => {
@@ -23,4 +32,5 @@ function loading(displayValue){
   loader.style.display= displayValue;
 
 }
+
 

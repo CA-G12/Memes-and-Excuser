@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: monospace, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #head {
@@ -17,8 +16,9 @@
     margin: 30px auto;
     justify-content: center;
 
-   
-
+}
+.loader{
+    margin-left: 45%;
 }
 
 .div-category {
@@ -30,7 +30,6 @@
 }
 
 .category-name {
-    font-family: monospace, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     font-size: 20px;
     width: max-content;
