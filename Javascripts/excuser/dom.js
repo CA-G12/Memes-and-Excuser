@@ -1,36 +1,58 @@
 const containers = createPointers();
 const container = containers[0]; // assign pointers
 const excuseContainer = containers[1];
+
 function createPointers() {
-    return [
-        document.getElementById("container"),
-        document.getElementById("excuseContainer"),
-    ];
+  return [
+    document.getElementById("container"),
+    document.getElementById("excuseContainer"),
+  ];
 }
-// createCategoryView(category) to display categories on the screen
 function createCategoryView(category, data) {
-    const paraCategory = createViews(category); // to create p element and set content for it
-    paraCategory.addEventListener(
-        "click",
-        () => {
-            findExcusesFromCategories(category, data);
-        },
-        false
-    );
-    container.append(paraCategory);
+  // Create Elements
+  const paraCategory = createViews(category);
+  const divCategory = document.createElement("div");
+  const imgEleCategory = document.createElement("img");
+  const ImageUrl = selectImage(category)[0];
+  imgEleCategory.src = ImageUrl;
+  // Add CSS Classes
+  container.classList.add("flex-container");
+  divCategory.classList.add("div-category");
+  paraCategory.classList.add("category-name");
+  imgEleCategory.classList.add("img-category");
+
+  // Appending Elements
+  divCategory.append(paraCategory);
+  divCategory.append(imgEleCategory);
+  container.append(divCategory);
+
+  // Add Listener
+  divCategory.addEventListener(
+    "click",
+    () => {
+      findExcusesFromCategories(category, data);
+    },
+    false
+  );
 }
-// generic task to create p elements
+// Generic task to create p elements
 function createViews(text) {
-    const para = document.createElement("p");
-    para.textContent = text;
-    return para;
+  const para = document.createElement("p");
+  para.textContent = text;
+  return para;
 }
-// to create a views for every excuse
+
 function createExcusesViews(excuses) {
-    let excusePara = null;
-    excuseContainer.textContent = ""; 
-    excuses.forEach((excuse) => {
-        para = createViews(excuse.excuse); // pass the title of the excuse
-        excuseContainer.append(para);
-    });
+  let excusePara = null;
+  excuseContainer.textContent = "";
+  let counter = 0;
+  excuses.forEach((excuse) => {
+    counter++;
+    excusePara = createViews(excuse.excuse); // pass the title of the excuse
+    excusePara.classList.add("excuse-para");
+    excusePara.textContent = counter + "- " + excusePara.textContent;
+    excuseContainer.classList.add("excuse-container");
+    excuseContainer.append(excusePara);
+  });
+  window.location.href = "#excuseContainer";
 }
