@@ -25,3 +25,12 @@ function createViews(text) {
     para.textContent = text;
     return para;
 }
+// to create a views for every excuse
+function createExcusesViews(excuses) {
+    let excusePara = null;
+    excuseContainer.textContent = ""; 
+    excuses.forEach((excuse) => {
+        para = createViews(excuse.excuse); // pass the title of the excuse
+        excuseContainer.append(para);
+    });
+}
