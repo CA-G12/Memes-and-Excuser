@@ -2,7 +2,7 @@
  Website for Memes and Excuses 
 
 ## ✧ Links
-- [ live Link ](" https://ca-g12.github.io/Memes-and-Excuses/")
+- [ live Link ](https://ca-g12.github.io/Memes-and-Excuses/)
 
 ## ✧ User Journey
 - The user opens the application and views all Memes.
