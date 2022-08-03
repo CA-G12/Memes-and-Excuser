@@ -1,0 +1,35 @@
+body{
+    font-family: Oswald,sans-serif ;
+    color: #333;
+}
+.meme-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.meme-div{
+    margin-top: 2.5em;
+    border-radius: .5em;
+    padding: 1em;
+    width: 250px;
+    height:250px;
+    background-color: rgb(249 249 249);
+    box-shadow: 0 4px 8px 0 rgba(228, 224, 224, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.meme-div:hover{
+    margin-top: 3.5em;
+}
+.meme-img{
+    width:100%;
+    height:150px;
+}
+.meme-name{
+    font-size: 1.5em;
+    margin: .25em;
+    color: #333;
+
+}
+.meme-box-count{
+    font-size: 1.35em;
+    margin: .5em;
+}
