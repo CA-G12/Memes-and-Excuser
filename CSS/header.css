@@ -41,10 +41,14 @@ header input {
     border-radius: 0.5em;
    
 }
+header a{
+    margin-right: 25px;
+}
 header a:link, a:visited , a:hover ,a:active {
     text-decoration:none;
     font-size: 1.5em;
     color: #d5183c;
+
 }
 .fa-magnifying-glass:before, .fa-search:before {
     content: "\f002";
