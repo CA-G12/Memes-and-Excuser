@@ -38,3 +38,4 @@ function selectImage(categoryName) {
     );
   });
 }
+module.exports = selectImage;
