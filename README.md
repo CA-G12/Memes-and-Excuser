@@ -13,9 +13,13 @@
 - User can search for a specific Excuses.
 
 ## ✧ User Stories
-
-
-## ✧ How to install the project on your local machine.
+-As a user : 
+- When I open the application, I want to see all memes on the page.
+- I can search for any memes I want by entering the name of the meme in the search bar. 
+- When I click on the arrow in the nav bar, I will move to the excuser page
+-  In the Excuser page, I want to see all situation categories 
+- When I click in the category , I want to see all excuses that are related to that category
+- ## ✧ How to install the project on your local machine.
 
 ## ![Memes-and-Excuses](./images/clone.jpg)
 
