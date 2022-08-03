@@ -28,7 +28,7 @@ function selectImage(categoryName) {
     "../images/family.webp",
     "../images/office.jpg",
     "../images/party.gif",
-    "../images/children.webp",
+    "../images/children.jpg",
   ];
 
   return images.filter((image) => {
