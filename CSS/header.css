@@ -11,7 +11,8 @@ html{
 header{
     display: flex;
     justify-content: space-between;
-    background-color: #e9e7e7f7;
+    background-color: rgb(233 233 233);
+    box-shadow: 0 4px 10px 0 rgba(126, 125, 125, 0.658);
     width: 100%;
     font-family:Oswald,sans-serif ;
 }
