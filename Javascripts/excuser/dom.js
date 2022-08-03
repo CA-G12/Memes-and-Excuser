@@ -27,7 +27,7 @@ function createViews(text) {
 }
 // to create a views for every excuse
 function createExcusesViews(excuses) {
-    let para = null;
+    let excusePara = null;
     excuseContainer.textContent = ""; 
     excuses.forEach((excuse) => {
         para = createViews(excuse.excuse); // pass the title of the excuse
