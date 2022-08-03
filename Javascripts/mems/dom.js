@@ -1,25 +1,36 @@
-const memeSection = document.getElementsByClassName("meme-container")[0]
+const memeSection = document.getElementsByClassName("meme-container")[0];
+const inputSearch = document.getElementById("searchInput");
 
-fetchApi("https://api.imgflip.com/get_memes",(data)=>{fetchFromApi(data,memeDom)})
+inputSearch.addEventListener("keyup", () => {
+    search(inputSearch.value);
+});
 
-function memeDom(imgurl, name , boxCount ) {
-   let memeDiv = document.createElement("div")
-   memeDiv.classList.add("meme-div")
+fetchApi("https://api.imgflip.com/get_memes", (data) => {
+  fetchFromApi(data, memeDom);
+});
 
-   let memeImg =document.createElement("img")
-   memeImg.setAttribute("src", imgurl)
-   memeImg.classList.add("meme-img")
+function memeDom(imgurl, name) {
+  let memeDiv = document.createElement("div");
+  memeDiv.classList.add("meme-div");
 
-   let memeName = document.createElement("h3")
-   memeName.classList.add("meme-name")
-   memeName.textContent=name
-   
-   let memeBoxCount= document.createElement("span")
-   memeBoxCount.classList.add("meme-box-count")
-   memeBoxCount.textContent="Box count : "+boxCount
-   
-   memeDiv.append(memeImg,memeName,memeBoxCount)
-   memeSection.appendChild(memeDiv)
+  let memeImg = document.createElement("img");
+  memeImg.setAttribute("src", imgurl);
+  memeImg.classList.add("meme-img");
+
+  let memeName = document.createElement("h3");
+  memeName.classList.add("meme-name");
+  memeName.textContent = name;
+  memeDiv.append(memeImg, memeName);
+  memeSection.appendChild(memeDiv);
 }
 
-   
+function search(inputName) {
+  let array = document.getElementsByClassName("meme-div");
+  Array.from(array).forEach((element) => {
+    if (  element.children[1].textContent.toLocaleLowerCase().includes(inputName) ) {
+      element.style.display = "block";
+    } else {
+      element.style.display = "none";
+    }
+  });
+}
