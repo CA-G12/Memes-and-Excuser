@@ -9,6 +9,11 @@ function extractCategories(data) {
       categories.push(excuse.category);
     }
   });
-  return categories ; 
 }
 
+function findExcusesFromCategories(category, data) {
+  let excuses = data.filter((excuse) => {
+    return excuse.category === category;
+  });
+  return createExcusesViews(excuses);
+}
