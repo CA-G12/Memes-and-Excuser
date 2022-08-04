@@ -36,7 +36,7 @@ nav{
         margin-top: 2em;
 }
 header input {
-    width:50%;
+    width:60%;
     height: 1.54em;
     border: 0.1em solid gray;
     border-radius: 0.5em;
@@ -50,6 +50,9 @@ header a:link, a:visited , a:hover ,a:active {
     font-size: 1.5em;
     color: #d5183c;
 
+}
+header input:focus{
+    outline: none;
 }
 .loader{
         margin-top: 10%;
@@ -72,7 +75,7 @@ header a:link, a:visited , a:hover ,a:active {
 .fa-magnifying-glass:before, .fa-search:before {
     content: "\f002";
     position: absolute;
-    left:40%;
+    left:50%;
     top: 15%;
     color: #a5a4a4;
     font-size: .9em;
@@ -111,8 +114,8 @@ header a:link, a:visited , a:hover ,a:active {
 
 }
 .fa-magnifying-glass:before, .fa-search:before {
-    left: 70%;
-    top: 1%; 
+    left: 50%;
+    top: 7%; 
     font-size: .9em;
 }
 
