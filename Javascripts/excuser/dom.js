@@ -1,6 +1,15 @@
 const containers = createPointers();
 const container = containers[0]; // assign pointers
 const excuseContainer = containers[1];
+const logoheader=document.getElementById("logoheader")
+const excuses=document.getElementById("excuses")
+excuses.addEventListener("click",()=>{
+  window.location.href="../index.html"
+})
+
+logoheader.addEventListener("click",()=>{
+  window.location.href="../index.html"
+})
 
 function createPointers() {
   return [
