@@ -1,8 +1,7 @@
-setTimeout(() => {
+
   fetchApi("https://excuser.herokuapp.com/v1/excuse/500", loading,function (data) {
   extractCategories(data); // to extract all categories from the objects to display them later
 });
-}, 1500);
 
 function extractCategories(data) {
   let categories = [];

@@ -45,6 +45,10 @@ function createViews(text) {
 function createExcusesViews(excuses) {
   let excusePara = null;
   excuseContainer.textContent = "";
+  let titleCategory = document.createElement("h2")
+  console.log(excuses);
+  titleCategory.textContent=excuses[0].category;
+  excuseContainer.append(titleCategory)
   let counter = 0;
   excuses.forEach((excuse) => {
     counter++;
@@ -54,5 +58,6 @@ function createExcusesViews(excuses) {
     excuseContainer.classList.add("excuse-container");
     excuseContainer.append(excusePara);
   });
+
   window.location.href = "#excuseContainer";
 }

@@ -1,9 +1,8 @@
 const memeSection = document.getElementsByClassName("meme-container")[0]
 const inputSearch = document.getElementById("searchInput");
 
-setTimeout(() => {
   fetchApi("https://api.imgflip.com/get_memes",loading,(data)=>{fetchFromApi(data,memeDom)}) 
-}, 1500);
+
 
 inputSearch.addEventListener("keyup", () => {
     search(inputSearch.value);
